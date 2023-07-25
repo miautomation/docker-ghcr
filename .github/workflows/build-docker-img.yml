@@ -1,6 +1,6 @@
 name: Build-Docker-Image
 
-on: [push]
+on: [workflow_dispatch]
 
 jobs:
   build_docker_img:
@@ -8,7 +8,7 @@ jobs:
      env:
        TAG: python-api
        PAT: ${{ secrets.GITHUB_TOKEN }}
-       USER: frankisinfotech
+       USER: miautomation
        REGISTRY: ghcr.io
        VERSION: v1
      
